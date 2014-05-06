@@ -1,0 +1,10 @@
+
+
+<tr id ="product_<%= product.id%>">
+  <td><%= best_in_place product, :name, :type => :input %></td>
+  <td><%= best_in_place product, :price, :type => :input %></td>
+  <td><%= best_in_place product, :image, :type => :input %></td>
+  <td><%= best_in_place product, :description, :type => :textarea %></td>
+  <td><%= link_to 'Show', product, :class=> 'btn' %></td>
+  <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' },:class=> 'btn' %></td>
+</tr>

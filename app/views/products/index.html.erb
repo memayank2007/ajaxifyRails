@@ -1,0 +1,23 @@
+<h1>Listing products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Description</th>
+
+    </tr>
+  </thead>
+
+  <tbody id="product_table">
+    <% @products.each do |product| %>
+       <%= render 'products/product', :product=> product %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path, :remote=>  true , :id => "new_product_link" %>
